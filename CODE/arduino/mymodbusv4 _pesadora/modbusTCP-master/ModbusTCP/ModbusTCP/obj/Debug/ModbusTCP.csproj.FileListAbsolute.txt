@@ -1,0 +1,6 @@
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.dll
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\bin\Debug\ModbusTCP.pdb
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.dll
+C:\Users\Asus\Desktop\mymodbus\modbusTCP-master\ModbusTCP\ModbusTCP\obj\Debug\ModbusTCP.pdb
