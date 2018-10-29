@@ -9,7 +9,7 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
  <figcaption> <p align="center">Fig.1 - Weighing board </p></figcaption>
  </p>
 
-***
+
 
 ## Hardware
 The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed by: 
@@ -26,7 +26,7 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 11. Harting  Eurocard - 09041326921 (DIN 41612);
 12. Power LED.
 
-***
+
 
 ## Software
 The software was developed for 4 platforms, including:
