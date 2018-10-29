@@ -1,13 +1,14 @@
-
 # WeighersandWebsites
 Software developed for a weighing board based on **ATmega328** micro-controller and **NodeMCU-ESP8266** for wifi conections with database in remote server.<br/> 
 The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows client application made in C# (.Net Framework) or with a general use ModBus IP application like _ModBus Doctor_.
 
 
-<p align="left"> 
+<p align="center"> 
 <img src="placa_legend.PNG" width="600px">
-<figcaption>Fig.1 - Weighing board</figcaption>
-</p>
+ <figcaption> <p align="center">Fig.1 - Weighing board </p></figcaption>
+ </p>
+
+***
 
 # Hardware
 The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed by: 
@@ -23,6 +24,8 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 10. Infineon Smart High-Side Power Switch (its716g);
 11. Harting  Eurocard - 09041326921 (DIN 41612);
 12. Power LED.
+
+***
 
 # Software
 The software was developed for 4 platforms, including:
