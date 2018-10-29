@@ -13,5 +13,6 @@ Its composed by 3 [sparkfun load cell amplifiers](https://www.sparkfun.com/produ
 
 
 # Software
+The software was developed for 3 platforms
 
 (in progress...)
