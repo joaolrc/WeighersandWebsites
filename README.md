@@ -4,15 +4,16 @@ The module comunicates by ModBus IP Protocol with the application in C# made in 
 
 # Hardware
 The code was used to program an Arduino Uno and a NodeMCU-ESP8266 for comand of a weighing module to be incorporated in a Checkweigher or any kind of fruit sorters.
-Its composed by 3 [sparkfun load cell amplifiers](https://www.sparkfun.com/products/13879) and  an [ENC28J60  ethernet shiedl](https://www.banggood.com/Mini-W5100-Ethernet-Network-Module-Board-For-Arduino-p-982664.html?rmmds=buy&cur_warehouse=CN)
+Its composed by 3 [sparkfun load cell amplifiers](https://www.sparkfun.com/products/13879) and  an [ENC28J60  ethernet shield](https://www.banggood.com/Mini-W5100-Ethernet-Network-Module-Board-For-Arduino-p-982664.html?rmmds=buy&cur_warehouse=CN)
 
 
-![imagem](WeighersandWebsites/sparkhx.jpg)
+![Sparkfun HX711](sparkhx.jpg 'Optional title')
 
 
 
 
 # Software
 The software was developed for 3 platforms
+
 
 (in progress...)
