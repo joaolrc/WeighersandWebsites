@@ -10,7 +10,7 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
 
 ***
 
-# Hardware
+## Hardware
 The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed by: 
 1. 3x Weidmuller OMNIMATE Signal - series B2C/S2C 3.50 - 2-row B2CF 3.50/08/180F SN OR BX;
 2. 3x [sparkfun load cell amplifiers](https://www.sparkfun.com/products/13879);
@@ -27,7 +27,7 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 
 ***
 
-# Software
+## Software
 The software was developed for 4 platforms, including:
 + ATmega328 for control of the process;
 + NodeMCU-ESP8266 for Wi-Fi conections; 
