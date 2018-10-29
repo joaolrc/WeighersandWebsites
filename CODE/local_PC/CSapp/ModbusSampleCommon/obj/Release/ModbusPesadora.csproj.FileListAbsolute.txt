@@ -1,9 +1,0 @@
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Release\App.ico
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Release\ModbusTester.exe
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Release\ModbusTCP.dll
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Release\ModbusTCP.pdb
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Release\Modbus.frmStart.resources
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Release\ModbusTester.Properties.Resources.resources
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Release\ModbusPesadora.csproj.GenerateResource.Cache
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Release\ModbusPesadora.csproj.CoreCompileInputs.cache
-C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Release\ModbusTester.exe
