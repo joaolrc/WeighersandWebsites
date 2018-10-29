@@ -22,3 +22,16 @@ C:\Users\Asus\Desktop\mymodbusv4 _timer_conf\modbusTCP-master\ModbusSampleCommon
 C:\Users\Asus\Desktop\mymodbusv4 _timer_conf\modbusTCP-master\ModbusSampleCommon\obj\Debug\ModbusPesadora.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\mymodbusv4 _timer_conf\modbusTCP-master\ModbusSampleCommon\obj\Debug\ModbusTester.exe
 C:\Users\Asus\Desktop\mymodbusv4 _timer_conf\modbusTCP-master\ModbusSampleCommon\obj\Debug\ModbusTester.pdb
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\App.ico
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTester.exe
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTester.pdb
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTCP.dll
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTCP.pdb
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\Modbus.frmStart.resources
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\ModbusTester.Properties.Resources.resources
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\ModbusPesadora.csproj.GenerateResource.Cache
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\ModbusPesadora.csproj.CoreCompileInputs.cache
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\ModbusTester.exe
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\obj\Debug\ModbusTester.pdb
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTester.exe.CodeAnalysisLog.xml
+C:\gitrep\CODE\local_PC\CSapp\ModbusSampleCommon\bin\Debug\ModbusTester.exe.lastcodeanalysissucceeded

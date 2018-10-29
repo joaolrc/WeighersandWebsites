@@ -5,7 +5,7 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
 
 
 <p align="center"> 
-<img src="placa_legend.PNG" width="600px">
+<img src="imagens/placa_legend.PNG" width="600px">
  <figcaption> <p align="center">Fig.1 - Weighing board </p></figcaption>
  </p>
 
