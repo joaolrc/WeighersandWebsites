@@ -35,5 +35,9 @@ The software was developed for 4 platforms, including:
 + .Net aplication for local or remote control and supervision of the process;
 + PHP files for data inserting and WEB pages for supervision of the process
 
+<p align="center"> 
+<img src="imagens/pesadora_conectadov3.PNG" width="600px">
+ <figcaption> <p align="center">Fig.1 - Microsoft .Net application developed </p></figcaption>
+ </p>
 
 (in progress...)
