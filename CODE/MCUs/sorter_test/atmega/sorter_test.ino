@@ -1,4 +1,4 @@
-//Cada vez que deteta a presen&ccedil;a de ta�a com fruto, retorna m�dia das leituras efetuadas
+//Cada vez que deteta a presença de taça com fruto, retorna m�dia das leituras efetuadas
 // precis�o diminui com a velocidade
 
 #include <Lpf.h>  //Livraria de Filtros
