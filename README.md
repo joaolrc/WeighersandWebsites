@@ -41,7 +41,7 @@ The software was developed for 4 platforms, including:
  </p>
 
  <p align="center"> 
-<img src="imagens/hometotal2v2.PNG" width="600px">
+<img src="imagens/home_page.png" width="600px">
  <figcaption> <p align="center">Fig. 4 - Home Page </p></figcaption>
  </p>
 
