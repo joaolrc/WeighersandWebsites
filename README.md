@@ -47,5 +47,5 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 
 
 #Also, the system was tested in an industrial fruit sorter and, for this, the software was developed only for the main MCU ([ATmega32](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/sorter_test/atmega/sorter_test.ino))
-<br>
+<br><br>
 (in progress...)
