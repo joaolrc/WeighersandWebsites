@@ -6,7 +6,7 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
 
 <p align="center"> 
 <img src="imagens/placa_legend.PNG" width="600px">
- <figcaption> <p align="center">Fig.1 - Weighing board </p></figcaption>
+ <figcaption> <p align="center">Fig. 1 - Weighing board </p></figcaption>
  </p>
 
 
@@ -34,17 +34,17 @@ The software was developed for 4 platforms, including:
 
 <p align="center"> 
 <img src="imagens/pesadora_conectadov3.PNG" width="600px">
- <figcaption> <p align="center">Fig.2 - Microsoft .Net application developed </p></figcaption>
+ <figcaption> <p align="center">Fig. 2 - Microsoft .Net application developed </p></figcaption>
  </p>
 
 <p align="center"> 
 <img src="imagens/index_page.PNG" width="600px">
- <figcaption> <p align="center">Fig.3 - Initial Page </p></figcaption>
+ <figcaption> <p align="center">Fig. 3 - Initial Page </p></figcaption>
  </p>
 
  <p align="center"> 
 <img src="imagens/hometotal2v2.PNG" width="600px">
- <figcaption> <p align="center">Fig.4 - Home Page (Supervision) </p></figcaption>
+ <figcaption> <p align="center">Fig. 4 - Home Page (Supervision) </p></figcaption>
  </p>
 
 (in progress...)
