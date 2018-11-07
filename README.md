@@ -25,7 +25,7 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 
 ## Software
 The software was developed for 4 platforms, including:
-+ ATmega328 for control of the process;
++ ATmega328 for control of the process; [a relative link](CODE/MCU's)
 + NodeMCU-ESP8266 for Wi-Fi conections;
 + .Net aplication for local or remote control and supervision of the process (see figure 2);
 + PHP files for data inserting and WEB pages for supervision of the process (see figures 3 and 4)
