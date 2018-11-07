@@ -1,7 +1,7 @@
 // ATmega 328/328p code
-//Guardar configuraÁıes das tolbas em Mb.R[11], Mb.R[12], Mb.R[13]
-//Guardar peso j· processado em Mb.R[51], Mb.[52], Mb.R[53]
-//Guardar pesos instant‚neos em Mb.R[54], Mb.R[55], Mb.R[56]
+//Guardar configura√ß√µes das tolbas em Mb.R[11], Mb.R[12], Mb.R[13]
+//Guardar peso j√° processado em Mb.R[51], Mb.[52], Mb.R[53]
+//Guardar pesos instant√¢neos em Mb.R[54], Mb.R[55], Mb.R[56]
 //Guardar numero de sacos feitos em Mb.R[61], Mb.R[62], Mb.R[63]
 //Function codes 1(read coils), 3(read registers), 5(write coil), 6(write register)
 //signed int Mb.R[0 to 125] and bool Mb.C[0 to 128] -> MB_N_R MB_N_C
@@ -34,7 +34,7 @@
 #define samples      50     //definir numero de amostras na media para tare inicial
 #define BANDWIDTH_HZ 10     // largura de banda do output do filtro
 #define offdelay     1000   //tempo de intervalo entre atuaon() e atuaoff()
-#define espdelay     10000  //Mudar este valor (ms) para mudar frequencia de atualizaÁao da base de dados
+#define espdelay     10000  //Mudar este valor (ms) para mudar frequencia de atualiza√ßao da base de dados
 
 float  peso1 = 0;
 float  peso2 = 0;
@@ -71,7 +71,7 @@ uint8_t subnet[]  = { 255, 255, 255, 0 };
 
 Mudbus Mb;                                  //construtor MODBUS
 
-SoftwareSerial ESPCOM(A6, 1);               // RX | TX -> Rx atribuido a ADC6 -> n„o faz nada
+SoftwareSerial ESPCOM(A6, 1);               // RX | TX -> Rx atribuido a ADC6 -> n√£o faz nada
 LPF lpf31(BANDWIDTH_HZ, IS_BANDWIDTH_HZ);   //construtores de filtros
 LPF lpf32(BANDWIDTH_HZ, IS_BANDWIDTH_HZ);
 LPF lpf33(BANDWIDTH_HZ, IS_BANDWIDTH_HZ);
@@ -82,24 +82,25 @@ HX711 scaleee(DOUT3, CLK3);
 
 SimpleTimer timer;                          //Construtor timer -> suporta varias instancias
 
-void setup() {  /////  SETUP  ////
-  Ethernet.begin(mac, ip, gateway, subnet);//configuraÁıes da rede
+/////////////////////////////////////////////////  SETUP  //////////////////////////////////////////////////////////////
+void setup() {  
+  Ethernet.begin(mac, ip, gateway, subnet);//configura√ß√µes da rede
   delay(50);
-  pinosconfig();                           //configurar pinos de atuaÁao como digital outputs
+  pinosconfig();                           //configurar pinos de atua√ßao como digital outputs
   ESPCOM.begin(115200);                    // Start the software serial for communication with the ESP8266
   timer.setInterval(espdelay, espsend); 
 
   //Holding Registers
-  Mb.R[54] = 0;                             //peso instant‚neo na tolba 1
-  Mb.R[55] = 0;                             //peso instant‚neo na tolba 2
-  Mb.R[56] = 0;                             //peso instant‚neo na tolba 3
+  Mb.R[54] = 0;                             //peso instant√¢neo na tolba 1
+  Mb.R[55] = 0;                             //peso instant√¢neo na tolba 2
+  Mb.R[56] = 0;                             //peso instant√¢neo na tolba 3
 
-  // valores de configuraÁao das tolbas(g) -> 30Kg = max
+  // valores de configura√ßao das tolbas(g) -> 30Kg = max
   Mb.R[11] = 30000;
   Mb.R[12] = 30000;
   Mb.R[13] = 30000;
 
-  //valores totais pesados em cada linha desde o ultimo iniciar da m·quina (Kg)
+  //valores totais pesados em cada linha desde o ultimo iniciar da m√°quina (Kg)
   Mb.R[51] = 0;
   Mb.R[52] = 0;
   Mb.R[53] = 0;
@@ -109,18 +110,18 @@ void setup() {  /////  SETUP  ////
   Mb.R[62] = 0;
   Mb.R[63] = 0;
 
-  //declives de correÁ„o para peso -> chamados na funÁ„o gram()
+  //declives de corre√ß√£o para peso -> chamados na fun√ß√£o gram()
   Mb.R[101] = 1;
   Mb.R[102] = 1;
   Mb.R[103] = 1;
 
   //atuadores (coils)
   Mb.C[1] = 0;                                //flag to send values to ESP
-  Mb.C[2] = 0;                                // Start/Stop flag1. (If==1) linha 1 comeÁa a atuar
-  Mb.C[3] = 0;                                // Start/Stop flag2. (If==1) linha 2 comeÁa a atuar
-  Mb.C[4] = 0;                                // Start/Stop flag3. (If==1) linha 3 comeÁa a atuar
+  Mb.C[2] = 0;                                // Start/Stop flag1. (If==1) linha 1 come√ßa a atuar
+  Mb.C[3] = 0;                                // Start/Stop flag2. (If==1) linha 2 come√ßa a atuar
+  Mb.C[4] = 0;                                // Start/Stop flag3. (If==1) linha 3 come√ßa a atuar
 
-  //para fazer debug, se necess·rio
+  //para fazer debug, se necess√°rio
   Mb.C[11] = 0;                               //linha 1 - alimentador
   Mb.C[12] = 0;                               //linha 1 - tampa
   Mb.C[21] = 0;                               //linha 2 - alimentador
@@ -128,11 +129,12 @@ void setup() {  /////  SETUP  ////
   Mb.C[31] = 0;                               //linha 3 - alimentador
   Mb.C[32] = 0;                               //linha 3 - tampa
   Mb.C[100] = 0;                              // tare flag
-
 }
-void loop()  ////  LOOP  ////
+
+/////////////////////////////////////////////////////  LOOP  ////////////////////////////////////////////////
+void loop()  
 {
-  timer.run();                               //Tratar dos temporizadores
+  timer.run();                               //Verificar e atuar temporizadores
   Mb.Run();                                  //Tratar de processos ModBus
     
   //Ler Celulas de carga
@@ -150,7 +152,7 @@ void loop()  ////  LOOP  ////
   filtrado2 = lpf32.NextValue(peso2);
   filtrado3 = lpf33.NextValue(peso3);
 
-  //Atualizar pesos instant‚neos em vari·veis ModBus (int16)
+  //Atualizar pesos instant√¢neos em vari√°veis ModBus (int16)
   Mb.R[54] = filtrado1;
   Mb.R[55] = filtrado2;
   Mb.R[56] = filtrado3;
@@ -160,7 +162,7 @@ void loop()  ////  LOOP  ////
   if (Mb.R[55] < 0) Mb.R[55] = 0;
   if (Mb.R[56] < 0) Mb.R[56] = 0;
 
-  //Atuar saÌdas se necess·rio
+  //Atuar sa√≠das se necess√°rio
   if ((filtrado1 >= Mb.R[11]) && (Mb.C[2] == 1)) { //passou o limite desejado -> atuar 1 vez durante 1 segundo na respetiva linha
     conta1++;
     if (conta1 < 2) {                              //if conta1==1...
@@ -188,7 +190,7 @@ void loop()  ////  LOOP  ////
     }
   }
 
-  if (millis() > 4000 & millis() < 5000) {         //fazer tare autom·tico ao iniciar baseado numa leitura apenas
+  if (millis() > 4000 & millis() < 5000) {         //fazer tare autom√°tico ao iniciar baseado numa leitura apenas
     count++;
     if (count == 1) {
       offset1 = units1;
@@ -213,8 +215,9 @@ void loop()  ////  LOOP  ////
 
 }   //END
 
-//// Functions ////
-void espsend() {                  //Enviar valores pesados "Hoje" para ESP8266 porta Serie
+/////////////////////////////////////////////// Functions //////////////////////////////////////////
+//Enviar valores pesados "Hoje" para ESP8266 porta Serie
+void espsend() {                  
   Mb.C[1] = 1;
   stringtot = String(Mb.R[51]) + " " + String(Mb.R[52]) + " " + String(Mb.R[53]) + "\n"; //String a enviar para a ESP
   ESPCOM.print(stringtot);
@@ -228,7 +231,7 @@ void pinosconfig() {
   pinMode(OUT4, OUTPUT);           //Digital OUT4 (In)
   pinMode(OUT5, OUTPUT);           //Digital OUT5 (In) (anterior ADC6)
   pinMode(OUT6, OUTPUT);           //Digital OUT6 (In) (anterior ADC7)
-  pinMode(0, OUTPUT);              //Pino 0 n„o È usado. Mas estava HIGH por ser RX default
+  pinMode(0, OUTPUT);              //Pino 0 n√£o √© usado. Mas estava HIGH por ser RX default
   digitalWrite(0, LOW);
 }
 
@@ -236,7 +239,7 @@ void pinosconfig() {
 void atuaon1() {
   digitalWrite(OUT1, HIGH);        //Parar alimentador 1
   digitalWrite(OUT2, HIGH);        //Abrir tampa 1
-  Mb.C[11] = 1;                    //linha 1 - alimentador -> necesss·rio ativar GPIO correspondente
+  Mb.C[11] = 1;                    //linha 1 - alimentador -> necesss√°rio ativar GPIO correspondente
   Mb.C[12] = 1;                    //linha 1 - tampa
   Mb.R[51] += guarda1 / 1000;      // atualizar total pesado na linha 1 (casas decimais sao ignoradas)
   Mb.R[61] += 1;                   //mais 1 saco embalado
@@ -265,7 +268,7 @@ void atuaon3() {
   lpf33.Reset(0);                   //Reset filter 3
 }
 
-//desatuar saÌdas linha 1
+//desatuar sa√≠das linha 1
 void atuaoff1() {
   digitalWrite(OUT1, LOW);          //Parar alimentador 1
   digitalWrite(OUT2, LOW);          //Fechar tampa 1
@@ -275,7 +278,7 @@ void atuaoff1() {
   lpf33.Reset(0);                   //Reset filter 3
 }
 
-//desatuar saÌdas linha 2
+//desatuar sa√≠das linha 2
 void atuaoff2() {
   digitalWrite(OUT3, LOW);          //Parar alimentador 3
   digitalWrite(OUT4, LOW);          //Fechar tampa 3
@@ -285,7 +288,7 @@ void atuaoff2() {
   lpf33.Reset(0);                   //Reset filter 3
 }
 
-//desatuar saÌdas linha 3
+//desatuar sa√≠das linha 3
 void atuaoff3() {
   digitalWrite(OUT5, HIGH);         //Parar alimentador 3
   digitalWrite(OUT6, HIGH);         //Fechar tampa 3
@@ -295,9 +298,9 @@ void atuaoff3() {
   lpf33.Reset(0);                   //Reset filter 3
 }
 
-//correÁ„o para peso
+//corre√ß√£o para peso
 float gram(float val, float b, int m) {
-  float x = (val - b) / m;          //equaÁao da reta
+  float x = (val - b) / m;          //equa√ßao da reta
   return x;
 }
 
