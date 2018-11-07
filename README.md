@@ -24,12 +24,11 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 12. Power LED.
 
 ## Software
-The software was developed for 4 platforms, including:
-+ ATmega328 for control of the process; [a relative link](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/sorter_test/atmega/sorter_test.ino)
-)
-+ NodeMCU-ESP8266 for Wi-Fi conections;
-+ .Net aplication for local or remote control and supervision of the process (see figure 2);
-+ PHP files for data inserting and WEB pages for supervision of the process (see figures 3 and 4)
+#The main software was developed for 4 platforms, including:
++ [ATmega328](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/weigher/atmega/atmega.ino) for control of the process; 
++ [NodeMCU-ESP8266](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/weigher/nodemcu/nodemcu.ino) for Wi-Fi conections;
++ [.Net aplication](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/local_PC/CSapp_source/ModbusIP_weigher/frmStart.cs) for local or remote control and supervision of the process (see figure 2);
++ [PHP files](https://github.com/joaolrc/WeighersandWebsites/tree/master/CODE/local_PC/PHP_files) for data inserting and WEB pages for supervision of the process (see figures 3 and 4)
 
 <p align="center"> 
 <img src="imagens/pesadora_conectadov3.PNG" width="600px">
@@ -46,4 +45,6 @@ The software was developed for 4 platforms, including:
  <figcaption> <p align="center">Fig. 4 - Home Page (home.php) </p></figcaption>
  </p>
 
+
+#Also, the system was tested in an industrial fruit sorter and, for this, the software was developed only for the main MCU ([ATmega32](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/sorter_test/atmega/sorter_test.ino))
 (in progress...)
