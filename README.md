@@ -25,7 +25,7 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 
 ## Software
 The software was developed for 4 platforms, including:
-+ ATmega328 for control of the process; [a relative link](WeighersandWebsites/CODE)
++ ATmega328 for control of the process; [a relative link](https://github.com/joaolrc/WeighersandWebsites/blob/master/CODE/MCUs/sorter_test/atmega/sorter_test.ino)
 )
 + NodeMCU-ESP8266 for Wi-Fi conections;
 + .Net aplication for local or remote control and supervision of the process (see figure 2);
