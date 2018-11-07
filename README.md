@@ -37,12 +37,12 @@ The software was developed for 4 platforms, including:
 
 <p align="center"> 
 <img src="imagens/index_page.PNG" width="600px">
- <figcaption> <p align="center">Fig. 3 - Initial Page </p></figcaption>
+ <figcaption> <p align="center">Fig. 3 - Initial Page (index.php) </p></figcaption>
  </p>
 
  <p align="center"> 
 <img src="imagens/home_page.png" width="600px">
- <figcaption> <p align="center">Fig. 4 - Home Page </p></figcaption>
+ <figcaption> <p align="center">Fig. 4 - Home Page (home.php) </p></figcaption>
  </p>
 
 (in progress...)
