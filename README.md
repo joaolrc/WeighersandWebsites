@@ -14,7 +14,7 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
 The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed by: 
 1. 3x Weidmuller OMNIMATE Signal - series B2C/S2C 3.50 - 2-row B2CF 3.50/08/180F SN OR BX;
 2. 3x [sparkfun load cell amplifiers](https://www.sparkfun.com/products/13879);
-3. 1x [ENC28J60  ethernet shield](https://www.banggood.com/Mini-W5100-Ethernet-Network-Module-Board-For-Arduino-p-982664.html?rmmds=buy&cur_warehouse=CN) for ethernet conections and ModBus IP comunication;
+3. [ENC28J60  ethernet shield](https://www.banggood.com/Mini-W5100-Ethernet-Network-Module-Board-For-Arduino-p-982664.html?rmmds=buy&cur_warehouse=CN) for ethernet conections and ModBus IP comunication;
 4. ICSP Header for in-circuit programming of the ATmega chip;
 5. ATmega 328 (SMD version);
 6. NodeMCU v3 - ESP8266;
@@ -34,17 +34,17 @@ The software was developed for 4 platforms, including:
 
 <p align="center"> 
 <img src="imagens/pesadora_conectadov3.PNG" width="600px">
- <figcaption> <p align="center">Fig.2 - Microsoft .Net application developed </p></figcaption>
+ <figcaption> <p align="center">Fig. 2 - Microsoft .Net application developed </p></figcaption>
  </p>
 
 <p align="center"> 
 <img src="imagens/index_page.PNG" width="600px">
- <figcaption> <p align="center">Fig.3 - Initial Page </p></figcaption>
+ <figcaption> <p align="center">Fig. 3 - Initial Page </p></figcaption>
  </p>
 
  <p align="center"> 
 <img src="imagens/hometotal2v2.PNG" width="600px">
- <figcaption> <p align="center">Fig.4 - Home Page (Supervision) </p></figcaption>
+ <figcaption> <p align="center">Fig. 4 - Home Page (Supervision) </p></figcaption>
  </p>
 
 (in progress...)
