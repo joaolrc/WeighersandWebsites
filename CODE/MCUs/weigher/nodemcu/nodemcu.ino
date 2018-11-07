@@ -80,19 +80,8 @@ void loop() {
   while (NodeMCU.available() == 0) {
     Serial.print(","); delay(100);                      //wait for arduino msg (tem que fazer alguma coisa senão faz reset)
   }
-  while (NodeMCU.available() && character != 10) {      //10=Line feed ASCII
-    character = NodeMCU.read();
-    if (isWhitespace(character)) space += 1;
-    if (space == 0)      content1.concat(character);
-    if (space == 1)      content2.concat(character);
-    if (space == 2)      content3.concat(character);
-  }
-  content1.trim();                                      //eliminar espaços
-  content2.trim();                                      //eliminar espaços
-  content3.trim();                                      //eliminar espaços
-
-  NodeMCU.flush();                                      //empty buffer
-  Serial.flush();                                       //empty buffer
+  
+ readesp(content1,content2,content3);                   //Ler mensagem enviada pelo ATmega e separar em 3 strings 
 
 #ifdef debug
   if (content1 != "") {
@@ -126,3 +115,24 @@ void loop() {
   client2.stop();
   delay(100);
 }
+
+////////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
+//Ler mensagem enviada pelo ATmega e separar em 3 strings 
+void readesp(String content1,String content2,String content3){
+  char character;
+  while (NodeMCU.available() && character != 10) {      //10=Line feed ASCII
+    character = NodeMCU.read();
+    if (isWhitespace(character)) space += 1;
+    if (space == 0)      content1.concat(character);
+    if (space == 1)      content2.concat(character);
+    if (space == 2)      content3.concat(character);
+  }
+  content1.trim();                                      //eliminar espaços
+  content2.trim();                                      //eliminar espaços
+  content3.trim();                                      //eliminar espaços
+  NodeMCU.flush();                                      //empty buffer
+  Serial.flush();                                       //empty buffer
+}
+
+
+
