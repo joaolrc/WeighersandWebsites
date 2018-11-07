@@ -10,7 +10,6 @@ The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows cli
  </p>
 
 
-
 ## Hardware
 The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed by: 
 1. 3x Weidmuller OMNIMATE Signal - series B2C/S2C 3.50 - 2-row B2CF 3.50/08/180F SN OR BX;
@@ -26,18 +25,26 @@ The board outline was an "Euroboard 160mmx100mm holes" and its mainly composed b
 11. Harting  Eurocard - 09041326921 (DIN 41612);
 12. Power LED.
 
-
-
 ## Software
 The software was developed for 4 platforms, including:
 + ATmega328 for control of the process;
 + NodeMCU-ESP8266 for Wi-Fi conections; 
-+ .Net aplication for local or remote control and supervision of the process;
-+ PHP files for data inserting and WEB pages for supervision of the process
++ .Net aplication for local or remote control and supervision of the process (see figure 2);
++ PHP files for data inserting and WEB pages for supervision of the process (see figures 3 and 4)
 
 <p align="center"> 
 <img src="imagens/pesadora_conectadov3.PNG" width="600px">
- <figcaption> <p align="center">Fig.1 - Microsoft .Net application developed </p></figcaption>
+ <figcaption> <p align="center">Fig.2 - Microsoft .Net application developed </p></figcaption>
+ </p>
+
+<p align="center"> 
+<img src="imagens/index_page.PNG" width="600px">
+ <figcaption> <p align="center">Fig.3 - Initial Page </p></figcaption>
+ </p>
+
+ <p align="center"> 
+<img src="imagens/hometotal2v2.PNG" width="600px">
+ <figcaption> <p align="center">Fig.4 - Home Page (Supervision) </p></figcaption>
  </p>
 
 (in progress...)
