@@ -1,10 +1,10 @@
 /*ESP code
-  AtÈ 3 leituras diferentes separadas por espaÁos e a acabar com line feed "\n" */
+  At√© 3 leituras diferentes separadas por espa√ßos e a acabar com line feed "\n" */
 
 #include <SoftwareSerial.h>
 #include <ESP8266WiFi.h>
 
-#define debug 1;  //comentar para n„o haver comunicaÁ„o sÈrie pela porta mini-USB
+#define debug 1;                      //comentar para n√£o haver comunica√ß√£o s√©rie pela porta mini-USB
 
 //credenciais da rede
 const char* ssid     = "default";
@@ -15,14 +15,15 @@ const char* streamId   = "....................";
 const char* privateKey = "....................";
 
 //STRINGS DE ACESSO NO SETUP PARA INICIAR NOVA LINHA NA TABELA
-String url = "/mcm/insertonce.php"; //ficheiro a aceder pela ESP que cria uma nova linha na tabela de pesos. Efetua 1 vez ao ligar a m·quina
+String url = "/mcm/insertonce.php"; //cria uma nova linha na tabela de pesos. Efetua 1 vez ao ligar a m√°quina (setup)
 String url2 = String("POST ") + url + " HTTP/1.1\r\n" +  "Host: " + host + "\r\n" +  "Connection: close\r\n\r\n";
 
 int space = 0;
 
 SoftwareSerial NodeMCU(D7, D8); // RX/TX
 
-void setup() {   ///// SETUP /////
+////////////////////////////////////////////////////// SETUP //////////////////////////////////////////////
+void setup() {   
 #ifdef debug
   Serial.begin(115200);
   Serial.print("Inicializando");
@@ -34,7 +35,7 @@ void setup() {   ///// SETUP /////
   pinMode(D8, OUTPUT);
 
   WiFiClient client;
-  WiFi.begin(ssid, password);               //ligar ‡ rede
+  WiFi.begin(ssid, password);               //ligar √† rede
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -48,7 +49,7 @@ void setup() {   ///// SETUP /////
   Serial.println(WiFi.localIP());
 #endif
 
-#ifdef debug                              // Confirmar se h· conex„o
+#ifdef debug                              // Confirmar se h√° conex√£o
   if (!client.connect(host, httpPort)) {
     Serial.println("connection failed");
   }
@@ -65,7 +66,8 @@ void setup() {   ///// SETUP /////
   delay(1000);
 }
 
-void loop() {  ///// LOOP ////
+ ////////////////////////////////////////////// LOOP /////////////////////////////////////////////////
+void loop() { 
 
   //Clear variables
   space = 0;
@@ -76,7 +78,7 @@ void loop() {  ///// LOOP ////
   delay(100);
 
   while (NodeMCU.available() == 0) {
-    Serial.print(","); delay(100);   //wait for arduino msg
+    Serial.print(","); delay(100);                      //wait for arduino msg (tem que fazer alguma coisa sen√£o faz reset)
   }
   while (NodeMCU.available() && character != 10) {      //10=Line feed ASCII
     character = NodeMCU.read();
@@ -85,9 +87,9 @@ void loop() {  ///// LOOP ////
     if (space == 1)      content2.concat(character);
     if (space == 2)      content3.concat(character);
   }
-  content1.trim();                                      //eliminar espaÁos
-  content2.trim();                                      //eliminar espaÁos
-  content3.trim();                                      //eliminar espaÁos
+  content1.trim();                                      //eliminar espa√ßos
+  content2.trim();                                      //eliminar espa√ßos
+  content3.trim();                                      //eliminar espa√ßos
 
   NodeMCU.flush();                                      //empty buffer
   Serial.flush();                                       //empty buffer
