@@ -1,7 +1,7 @@
 # WeighersandWebsites
 ## Overview
 Software developed for a weighing board based on **ATmega328** micro-controller and **NodeMCU-ESP8266** for wifi conections with database in remote server.<br/> 
-The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows client application made in C# (.Net Framework) or with a general use ModBus IP application like _ModBus Doctor_.&Ccedil;
+The module (see figure 1) comunicates by **ModBus IP** Protocol with Windows client application made in C# (.Net Framework) or with a general use ModBus IP application like _ModBus Doctor_.
 
 <p align="center"> 
 <img src="imagens/placa_legend.PNG" width="600px">
